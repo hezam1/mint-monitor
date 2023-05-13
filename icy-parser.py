@@ -12,9 +12,9 @@ doc = BeautifulSoup(page, "html.parser")
 INFURA_ID = ""
 
 if len(INFURA_ID) == 0:
-  raise BaseException("Undefined INFURA_ID. You can get one for free by signing up at https://infura.io")
+  raise BaseException("8qwUGZHMPDsqibPCLEh5ROgCKil3jWu8")
 
-infura_url = f"https://mainnet.infura.io/v3/{INFURA_ID}"
+infura_url = f"https://eth-mainnet.g.alchemy.com/v2/8qwUGZHMPDsqibPCLEh5ROgCKil3jWu8"
 w3 = Web3(Web3.HTTPProvider(infura_url))
 
 for parent in doc.find("p", string="Collection").parents:
