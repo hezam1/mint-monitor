@@ -9,11 +9,11 @@ from eth_abi import decode_single
 INFURA_ID = ""
 
 if len(INFURA_ID) == 0:
-  raise BaseException("Undefined INFURA_ID. You can get one for free by signing up at https://infura.io")
+  raise BaseException("8qwUGZHMPDsqibPCLEh5ROgCKil3jWu8")
 
 w3 = Web3(
     Web3.WebsocketProvider(
-        f"wss://mainnet.infura.io/ws/v3/{INFURA_ID}"
+        f"wss://eth-mainnet.g.alchemy.com/v2/8qwUGZHMPDsqibPCLEh5ROgCKil3jWu8"
     )
 )
 
@@ -25,7 +25,7 @@ file.close()
 
 async def get_event():
     async with connect(
-        f"wss://mainnet.infura.io/ws/v3/{INFURA_ID}"
+        f"wss://eth-mainnet.g.alchemy.com/v2/8qwUGZHMPDsqibPCLEh5ROgCKil3jWu8"
     ) as ws:
         await ws.send(
             json.dumps(
